@@ -11,6 +11,7 @@ import { UsersService } from './Services/users.service';
 })
 export class AppComponent {
   post : Post[]=[];
+  postUser : Post[]=[];
   users :User[] = [];
   idUser = 1;
 
@@ -24,7 +25,7 @@ export class AppComponent {
   }
   getPost(){
     this.postServices.getPost().subscribe(result => {
-      this.post  = result;
+      this.post= result;
       console.log(this.post)
     });
   }
@@ -36,7 +37,7 @@ export class AppComponent {
   }
   getPostUser(){
     this.postServices.getPostUser(this.idUser).subscribe(result => {
-      this.post = result;
+      this.postUser = result;
     });;
   }
 }
