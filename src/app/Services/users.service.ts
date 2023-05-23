@@ -5,11 +5,15 @@ import { Observable } from 'rxjs/internal/Observable';
 import { of } from 'rxjs';
 import { User } from '../Models/Users';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
   private API_URL = 'https://jsonplaceholder.typicode.com/users';
+  selectedUser: User | undefined;
+ 
   constructor(private http: HttpClient) { }
 
   //Este me retorna un listado de usuarios

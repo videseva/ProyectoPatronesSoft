@@ -2,8 +2,10 @@
     font-size: 0.8125rem;
     color: #3c4142;
     font-weight: 600;
+   
     
   }
+ 
   .widget-26 .widget-26-job-info {
     min-width: 100px;
     font-weight: 400;
@@ -24,4 +26,14 @@
     color: #3c4142;
     font-size: 0.8125rem;
   }
-  
+  .widget-26 .widget-26-job-title a:hover {
+    color: #68CBD7;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .widget-26 .widget-26-job-title .employer-name:hover {
+    color: #68CBD7;
+    text-decoration: none;
+    cursor: pointer;
+
+  }
