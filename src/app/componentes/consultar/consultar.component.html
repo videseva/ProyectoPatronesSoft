@@ -1,0 +1,88 @@
+<div class="container">
+  
+  <div class="row ">
+    <div class="col-lg-12 card-margin">
+      <form id="search-form">
+        <div class="row no-gutters">
+          <div class="col-lg-10 col-md-11 col-sm-12 p-0">
+            <input
+              type="text"
+              placeholder="Buscar..."
+              class="form-control"
+              id="buscar"
+              name="buscar"
+            />
+          </div>
+
+          <div class="col-lg-1 col-md-1">
+            <button type="submit" class="btn btn-base">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-search"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!--  -->
+  <br>
+  <div class="row">
+    <div class="result-body">
+      <div class="table-responsive">
+        <table class="table widget-26 " *ngFor="let item of users; index as i">
+          <tbody> 
+            <tr>
+              <td>
+                <div class="widget-26-job-emp-img">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Company" />
+                </div>
+            </td>
+            <td>
+              <div class="widget-26-job-title">
+                  <h5>{{item.name}}</h5>
+                  <p class="employer-name">{{item.username}}</p>
+                <p class="text-muted m-0">in <span class="location">{{item.email}}</span></p>
+            
+              </div>
+          </td>
+          <td>
+            <div class="widget-26-job-info">
+                <p class="type m-0">Sitio Web</p>
+                <p class="text-muted m-0">in <span class="location">{{item.website}}</span></p>
+            </div>
+        </td>
+        <td>
+          <p class="widget-26-job-info">Company</p>
+            <div class="widget-26-job-salary">{{item.company.name}}</div>
+        </td>
+        <td>
+            <div class="widget-26-job-category bg-soft-base">
+                <i class="indicator"></i>
+                <span>{{item.phone}}</span>
+            </div>
+        </td>
+       
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

@@ -1,0 +1,27 @@
+.widget-26 .widget-26-job-category span {
+    font-size: 0.8125rem;
+    color: #3c4142;
+    font-weight: 600;
+    
+  }
+  .widget-26 .widget-26-job-info {
+    min-width: 100px;
+    font-weight: 400;
+  }
+  
+  .widget-26 .widget-26-job-info p {
+    line-height: 1.5;
+    color: #3c4142;
+    font-size: 0.8125rem;
+  }
+  
+  .widget-26 .widget-26-job-info .location {
+    color: #3c4142;
+  }
+  .widget-26 .widget-26-job-salary {
+    min-width: 70px;
+    font-weight: 400;
+    color: #3c4142;
+    font-size: 0.8125rem;
+  }
+  
