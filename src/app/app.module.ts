@@ -7,13 +7,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { ConsultarComponent } from './componentes/consultar/consultar.component';
 import { NavComponent } from './componentes/nav/nav.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ConsultarComponent,
     NavComponent,
-    InicioComponent
+    InicioComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
