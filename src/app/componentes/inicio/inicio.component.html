@@ -1,50 +1,118 @@
+<div class="main-body">
+  <div class="row">
+    <div>
+      <h6 class="card-title" style="text-align: center">
+        Solicitudes De Amistad
+      </h6>
+      <hr />
 
-    <div class="row">
-      <div class="col-md-4"  *ngFor="let item of post; index as i">
-        <div class="card user-card">
-          <div class="card-header">
-            <h5>{{item.title}}</h5>
-          </div>
-          <div class="card-block">
-            <div class="user-image">
-              <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-radius" alt="User-Profile-Image">
+      <div class="card-body scrollable">
+        <div
+          class="d-flex justify-content-between mb-2 pb-2 border-bottom"
+          *ngFor="let item of users"
+        >
+          <div class="d-flex align-items-center hover-pointer">
+            <img
+              class="img-xs rounded-circle"
+              src="https://bootdey.com/img/Content/avatar/avatar2.png"
+              alt=""
+            />
+            <div class="ml-2">
+              <p>{{ item.name }}</p>
+              <p class="tx-11 text-muted">{{ item.email }}</p>
             </div>
-            <h6 class="f-w-600 m-t-25 m-b-10">Alessa Robert</h6>
-            <p class="text-muted">Active | Male | Born 23.05.1992</p>
-            <hr>
-            <p class="text-muted m-t-15">Activity Level: 87%</p>
-            <ul class="list-unstyled activity-leval">
-              <li class="active"></li>
-              <li class="active"></li>
-              <li class="active"></li>
-              <li></li>
-              <li></li>
-            </ul>
-            <div class="bg-c-blue counter-block m-t-10 p-20">
-              <div class="row">
-                <div class="col-4">
-                  <i class="fa fa-comment"></i>
-                  <p>1256</p>
-                </div>
-                <div class="col-4">
-                  <i class="fa fa-user"></i>
-                  <p>8562</p>
-                </div>
-                <div class="col-4">
-                  <i class="fa fa-suitcase"></i>
-                  <p>189</p>
+          </div>
+          <button class="btn btn-icon" (click)="verUsuario(item)">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-user-plus"
+              data-toggle="tooltip"
+              title=""
+              data-original-title="Connect"
+            >
+              <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="8.5" cy="7" r="4"></circle>
+              <line x1="20" y1="8" x2="20" y2="14"></line>
+              <line x1="23" y1="11" x2="17" y2="11"></line>
+            </svg>
+            
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- POST -->
+    <div class="col-md-8 scrollable">
+      <div
+        class="row justify-content-center"
+        *ngFor="let item of post; index as i"
+      >
+        <div class="col-md-8">
+          <div class="card user-card">
+            <div class="card-header">
+              <h5 class="f-w-600 m-t-25 m-b-10">
+                <i class="fa fa-user"></i>
+                {{ getUserFullName(+item.userId) }}
+              </h5>
+            </div>
+            <div class="card-block">
+              <div class="user-image">
+                <img
+                  src="https://bootdey.com/img/Content/avatar/avatar7.png"
+                  class="img-radius"
+                  alt="User-Profile-Image"
+                />
+              </div>
+              <h6 class="f-w-600 m-t-25 m-b-10">{{ item.title }}</h6>
+              <p class="text-muted">{{ getUserEmail(+item.userId) }}</p>
+              <hr />
+              <ul class="list-unstyled activity-leval">
+                <li class="active"></li>
+                <li class="active"></li>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+              </ul>
+              <div class="bg-c-blue counter-block m-t-10 p-20">
+                <div class="row">
+                  <div class="col-4">
+                    <i class="fa fa-comment"></i>
+                    <p>1256</p>
+                  </div>
+                  <div class="col-4">
+                    <i class="fa fa-user"></i>
+                    <p>8562</p>
+                  </div>
+                  <div class="col-4">
+                    <i class="fa fa-suitcase"></i>
+                    <p>189</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <p class="m-t-15 text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <hr>
-            <div class="row justify-content-center user-social-link">
-              <div class="col-auto"><a href="#!"><i class="fa fa-facebook text-facebook"></i></a></div>
-              <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
-              <div class="col-auto"><a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a></div>
+              <hr />
+              <div class="row justify-content-center user-social-link">
+                <div class="col-auto">
+                  <a href="#!"><i class="fa fa-facebook text-facebook"></i></a>
+                </div>
+                <div class="col-auto">
+                  <a href="#!"><i class="fa fa-twitter text-twitter"></i></a>
+                </div>
+                <div class="col-auto">
+                  <a href="#!"><i class="fa fa-dribbble text-dribbble"></i></a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
+</div>
