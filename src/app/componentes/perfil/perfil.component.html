@@ -17,8 +17,7 @@
               <p class="text-muted font-size-sm">
                 {{ user.address.street }}, {{ user.address.city }}
               </p>
-              <button class="btn btn-primary">Seguir</button>
-              <button class="btn btn-outline-primary">Post</button>
+              <button class="btn btn-primary " (click)="scrollToPost()">Post de {{ user.name }} </button>
             </div>
           </div>
         </div>
@@ -115,7 +114,7 @@
       </div>
 
       <!-- -- -->
-      <div class="container row justify-content-center " *ngIf="posts.length > 0" >
+      <div class="container row justify-content-center  post" #post *ngIf="posts.length > 0" >
         
           <div class="col-md-8" *ngFor="let post of posts">
             <div class="media g-mb-30 media-comment">

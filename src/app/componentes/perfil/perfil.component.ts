@@ -13,8 +13,11 @@ import { Post } from '../../Models/Post';
 export class PerfilComponent implements OnInit {
   user: User | undefined;
   posts: Post[] = [];
+  
 
-  constructor(private userServices: UsersService, private postServices: PostService) {}
+  constructor(private userServices: UsersService, private postServices: PostService) {
+   
+  }
 
   ngOnInit() {
     this.user = this.userServices.selectedUser;
@@ -24,6 +27,15 @@ export class PerfilComponent implements OnInit {
         this.posts = result;
       });
     }
-  }}
+   
+  }
+  // que me lleve a la tarjeta POST 
+  scrollToPost() {
+    const post = document.querySelector('.post') as HTMLElement;
+  
+    post.scrollIntoView({ behavior: 'smooth' });
+  }
+  
+}
 
 
