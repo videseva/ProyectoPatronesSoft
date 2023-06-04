@@ -8,7 +8,7 @@ import { ConsultarComponent } from './componentes/consultar/consultar.component'
 import { NavComponent } from './componentes/nav/nav.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { PerfilComponent } from './componentes/perfil/perfil.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { PerfilComponent } from './componentes/perfil/perfil.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

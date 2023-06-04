@@ -2,7 +2,7 @@
   
   <div class="row ">
     <div class="col-lg-12 card-margin">
-      <form id="search-form">
+      <form id="search-form "(ngSubmit)="buscarUsuarios()">
         <div class="row no-gutters">
           <div class="col-lg-10 col-md-11 col-sm-12 p-0">
             <input
@@ -11,7 +11,10 @@
               class="form-control"
               id="buscar"
               name="buscar"
+              [(ngModel)]="searchTerm"
             />
+         
+           
           </div>
 
           <div class="col-lg-1 col-md-1">
@@ -32,6 +35,8 @@
                 <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
               </svg>
             </button>
+            <button class="clear-icon" *ngIf="searchTerm" (click)="VaciarInputBusqueda()">&#10006;</button>
+
           </div>
         </div>
       </form>

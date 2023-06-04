@@ -4,6 +4,8 @@ import { Post } from '../../Models/Post';
 import { User } from '../../Models/Users';
 import { PostService } from '../../Services/post.service';
 import { UsersService } from '../../Services/users.service';
+import { FormsModule } from '@angular/forms';
+
 
 
 @Component({
@@ -16,6 +18,9 @@ export class ConsultarComponent {
   postUser : Post[]=[];
   users :User[] = [];
   idUser = 1;
+  originalUsers: User[] = [];
+  searchTerm: string = '';
+
   
 
   constructor(private postServices: PostService, private userServices: UsersService, private router: Router) { }
@@ -52,7 +57,23 @@ export class ConsultarComponent {
     this.router.navigate(['/perfil']);
   }
 
- 
-
-
+  buscarUsuarios() {
+  
+    console.log('Buscando usuarios con el nombre...:', this.searchTerm);
+       if (this.searchTerm.trim() === '') {
+      this.getUser();
+    } else {
+      this.users = this.users.filter(user =>
+        user.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
+  }
+  VaciarInputBusqueda() {
+    this.searchTerm = '';
+    this.buscarUsuarios();
+  }
 }
+  
+
+
+
