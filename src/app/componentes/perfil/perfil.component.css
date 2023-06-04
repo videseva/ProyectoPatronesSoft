@@ -46,3 +46,8 @@ body{
 .media-comment {
     margin-top:20px
 }
+
+.scrollable{
+    overflow-y: scroll;
+    height: 80vh;
+}

@@ -60,7 +60,8 @@
         </ul>
       </div>
     </div>
-    <div class="col-md-8">
+
+    <div class="col-md-8 scrollable">
       <div class="card mb-3">
         <div class="card-body">
           <div class="row">
@@ -114,7 +115,7 @@
       </div>
 
       <!-- -- -->
-      <div class="container " *ngIf="posts.length > 0" >
+      <div class="container row justify-content-center " *ngIf="posts.length > 0" >
         
           <div class="col-md-8" *ngFor="let post of posts">
             <div class="media g-mb-30 media-comment">
@@ -172,5 +173,6 @@
        
       </div>
     </div>
+
   </div>
 </div>
